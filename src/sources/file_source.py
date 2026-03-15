@@ -1,4 +1,3 @@
-from __future__ import annotations
 from typing import Iterable, Iterator
 from pathlib import Path
 import json 
