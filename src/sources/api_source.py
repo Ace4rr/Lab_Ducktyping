@@ -32,6 +32,7 @@ class ApiTaskSource:
             return [] 
         if not isinstance(raw,list):
             logger.error("Api fetcher must return a list of task dicts")
+            return []
 
         def gen():
             for idx, item in enumerate(raw):

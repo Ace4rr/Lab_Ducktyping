@@ -7,4 +7,4 @@ class TaskSourceProtocol(Protocol):
     Contract for task sources
     """
     def get_tasks(self)->Iterable[Task]:
-        
+        pass

@@ -28,5 +28,5 @@ def main(argv:list[str] |None =None)->int:
         logger.info(f"Loaded tasks:{task},{task.is_ready}")
         print(f"{task.id} | {task.description[:60]} | pr={task.priority} | status={task.status} | ready={task.is_ready}")
 
-if __name__=="main":
+if __name__=="__main__":
     main()

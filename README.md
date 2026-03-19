@@ -1,1 +1,52 @@
 # Lab_Ducktyping
+## Описание
+
+Данный проект представляет собой структуру имитирующую поведение системы приема задач реализованную в рамках **Лабораторной работы №1**
+Используются:
+- Duck Typing
+- Контрактного программирования
+- `typing.Protocol`
+
+Система имеет расширяемую архитектуру
+
+#### Запуск 
+Запускается из главной директории через `python -m src.main`
+### Структура проекта
+ <pre>
+.
+├── src/
+│   ├── sources/            # Источники данных
+│   │   ├── __init__.py
+│   │   ├── api_source.py
+│   │   ├── file_source.py
+│   │   └── generator_source.py
+│   ├── __init__.py
+│   ├── exceptions.py       # Исключения
+│   ├── main.py             # Точка входа
+│   ├── models.py           # Основная структура Task
+│   ├── protocols.py        # Интерфейсы и протоколы
+│   └── receiver.py         # Обработчик
+├── tests/                  # Тесты
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_api_source.py
+│   ├── test_file_source.py
+│   ├── test_generator_source.py
+│   ├── test_main.py
+│   ├── test_model.py
+│   ├── test_protocols.py
+│   └── test_receiver.py
+├── .gitignore
+├── .pre-commit-config.yaml
+├── logger.py
+├── pyproject.toml
+├── README.md
+└── uv.lock
+</pre>
+#### Формат работы
+Вызывается source.get_tasks()
+Задачи проверяются на корректность относильно Task и затем валидные задачи обрабатываются 
+- Все задачи реализованы через единый контакт 
+- Не использован общий базовый класс для источников
+- Контакт описан через Typing.Protocol
+
